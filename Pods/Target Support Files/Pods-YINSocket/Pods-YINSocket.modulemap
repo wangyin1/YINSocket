@@ -1,0 +1,6 @@
+framework module Pods_YINSocket {
+  umbrella header "Pods-YINSocket-umbrella.h"
+
+  export *
+  module * { export * }
+}
