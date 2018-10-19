@@ -14,6 +14,8 @@
 		181B52D02179C01900AFC199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181B52CE2179C01900AFC199 /* LaunchScreen.storyboard */; };
 		181B52D32179C01A00AFC199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52D22179C01A00AFC199 /* main.m */; };
 		181B52DC2179C26F00AFC199 /* YINSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52DB2179C26F00AFC199 /* YINSocket.m */; };
+		181B52EE2179DA5F00AFC199 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52EA2179DA5F00AFC199 /* GCDAsyncUdpSocket.m */; };
+		181B52EF2179DA5F00AFC199 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52EB2179DA5F00AFC199 /* GCDAsyncSocket.m */; };
 		C8490347B89F80FA6E68377D /* libPods-YINSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265B84668DEB8152741D2442 /* libPods-YINSocket.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		181B52D22179C01A00AFC199 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181B52DA2179C26F00AFC199 /* YINSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YINSocket.h; sourceTree = "<group>"; };
 		181B52DB2179C26F00AFC199 /* YINSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YINSocket.m; sourceTree = "<group>"; };
+		181B52EA2179DA5F00AFC199 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		181B52EB2179DA5F00AFC199 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		181B52EC2179DA5F00AFC199 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		181B52ED2179DA5F00AFC199 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		265B84668DEB8152741D2442 /* libPods-YINSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YINSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A1FE0186B08EC649B2E65 /* Pods-YINSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YINSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-YINSocket/Pods-YINSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,12 +91,24 @@
 		181B52D92179C26400AFC199 /* YINSocket */ = {
 			isa = PBXGroup;
 			children = (
+				181B52E92179DA5F00AFC199 /* GCD */,
 				181B52DA2179C26F00AFC199 /* YINSocket.h */,
 				181B52DB2179C26F00AFC199 /* YINSocket.m */,
 			);
 			name = YINSocket;
 			path = Classes/YINSocket;
 			sourceTree = SOURCE_ROOT;
+		};
+		181B52E92179DA5F00AFC199 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				181B52EA2179DA5F00AFC199 /* GCDAsyncUdpSocket.m */,
+				181B52EB2179DA5F00AFC199 /* GCDAsyncSocket.m */,
+				181B52EC2179DA5F00AFC199 /* GCDAsyncUdpSocket.h */,
+				181B52ED2179DA5F00AFC199 /* GCDAsyncSocket.h */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
 		};
 		777F5059EC8893F0F3DDA73A /* Frameworks */ = {
 			isa = PBXGroup;
@@ -201,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181B52EF2179DA5F00AFC199 /* GCDAsyncSocket.m in Sources */,
 				181B52C82179C01900AFC199 /* ViewController.m in Sources */,
+				181B52EE2179DA5F00AFC199 /* GCDAsyncUdpSocket.m in Sources */,
 				181B52D32179C01A00AFC199 /* main.m in Sources */,
 				181B52C52179C01900AFC199 /* AppDelegate.m in Sources */,
 				181B52DC2179C26F00AFC199 /* YINSocket.m in Sources */,
