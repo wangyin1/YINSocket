@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GCDAsyncSocket.h"
-#import "GCDAsyncUdpSocket.h"
+
 
 typedef enum : NSUInteger {
     YINSocketEventConnectSucceed,//连接成功 / 有新的客户机连接
