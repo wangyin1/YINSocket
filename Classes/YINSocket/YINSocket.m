@@ -65,10 +65,10 @@
         _beatTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
         dispatch_source_set_timer(_beatTimer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
         dispatch_source_set_event_handler(_beatTimer, ^{
-            _count+=1;
-            if ( ![weak_self tcpConnectToHost:weak_self.ipStr onPort:weak_self.portStr eventBlock:weak_self.eventBlock]&&_count==5) {
+            weak_self.count+=1;
+            if ( ![weak_self tcpConnectToHost:weak_self.ipStr onPort:weak_self.portStr eventBlock:weak_self.eventBlock]&&weak_self.count==5) {
                 if (weak_self.eventBlock) {
-                    weak_self.eventBlock(YINSocketEventConnectError, _tcpClient, @"断开与服务器的连接");
+                    weak_self.eventBlock(YINSocketEventConnectError, weak_self.tcpClient, @"断开与服务器的连接");
                 }
             }
         });
