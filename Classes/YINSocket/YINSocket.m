@@ -9,11 +9,14 @@
 #import "YINSocket.h"
 
 @interface YINSocket ()<GCDAsyncSocketDelegate,GCDAsyncUdpSocketDelegate>
-
+{
+    dispatch_source_t   _beatTimer;
+}
 @property(nonatomic,strong)GCDAsyncSocket *tcpService;
 
 
-@property(nonatomic,strong)dispatch_source_t   beatTimer;
+
+
 @property(nonatomic,copy)NSString  *ipStr;
 @property(nonatomic,copy)NSString  *portStr;
 @property(nonatomic,strong)GCDAsyncSocket *tcpClient;
@@ -78,7 +81,7 @@
 
 - (void)doAdutoConnect{
     _count=0;
-    dispatch_resume(self.beatTimer);
+    dispatch_resume([self beatTimer]);
 }
 
 - (void)close{
@@ -190,14 +193,14 @@
 // 链接服务器端成功, 客户端获取地址和端口号
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port
 {
-    dispatch_source_cancel(_beatTimer);
+    dispatch_source_cancel([self beatTimer]);
     if (self.eventBlock) {
         self.eventBlock(YINSocketEventConnectSucceed,sock,@"连接服务端成功");
     }
     [sock readDataWithTimeout:-1 tag:0];
 }
 - (void)socket:(GCDAsyncSocket *)sock didConnectToUrl:(NSURL *)url{
-    dispatch_source_cancel(_beatTimer);
+    dispatch_source_cancel([self beatTimer]);
     if (self.eventBlock) {
         self.eventBlock(YINSocketEventConnectSucceed,sock,@"连接服务端成功");
     }
