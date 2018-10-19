@@ -14,9 +14,6 @@
 }
 @property(nonatomic,strong)GCDAsyncSocket *tcpService;
 
-
-
-
 @property(nonatomic,copy)NSString  *ipStr;
 @property(nonatomic,copy)NSString  *portStr;
 @property(nonatomic,strong)GCDAsyncSocket *tcpClient;

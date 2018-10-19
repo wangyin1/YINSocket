@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16A61AA9825A9C778D54FB18 /* Pods_YINSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81AC2BC7C08E348513D5B37 /* Pods_YINSocket.framework */; };
 		181B52C52179C01900AFC199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52C42179C01900AFC199 /* AppDelegate.m */; };
 		181B52C82179C01900AFC199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52C72179C01900AFC199 /* ViewController.m */; };
 		181B52CB2179C01900AFC199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181B52C92179C01900AFC199 /* Main.storyboard */; };
@@ -15,6 +14,7 @@
 		181B52D02179C01900AFC199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181B52CE2179C01900AFC199 /* LaunchScreen.storyboard */; };
 		181B52D32179C01A00AFC199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52D22179C01A00AFC199 /* main.m */; };
 		181B52DC2179C26F00AFC199 /* YINSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B52DB2179C26F00AFC199 /* YINSocket.m */; };
+		8323E4CE2D33DEA28C4F7A02 /* libPods-YINSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F86672C9020F4D67FA37C3 /* libPods-YINSocket.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		181B52D22179C01A00AFC199 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181B52DA2179C26F00AFC199 /* YINSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YINSocket.h; sourceTree = "<group>"; };
 		181B52DB2179C26F00AFC199 /* YINSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YINSocket.m; sourceTree = "<group>"; };
-		A81AC2BC7C08E348513D5B37 /* Pods_YINSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YINSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F86672C9020F4D67FA37C3 /* libPods-YINSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YINSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A1FE0186B08EC649B2E65 /* Pods-YINSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YINSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-YINSocket/Pods-YINSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16A61AA9825A9C778D54FB18 /* Pods_YINSocket.framework in Frameworks */,
+				8323E4CE2D33DEA28C4F7A02 /* libPods-YINSocket.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 		777F5059EC8893F0F3DDA73A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A81AC2BC7C08E348513D5B37 /* Pods_YINSocket.framework */,
+				20F86672C9020F4D67FA37C3 /* libPods-YINSocket.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,7 +120,6 @@
 				181B52BC2179C01900AFC199 /* Sources */,
 				181B52BD2179C01900AFC199 /* Frameworks */,
 				181B52BE2179C01900AFC199 /* Resources */,
-				088CC1B99A2A24BDA6A3ED5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,24 +176,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		088CC1B99A2A24BDA6A3ED5F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YINSocket/Pods-YINSocket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YINSocket/Pods-YINSocket-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AE922EFBB2855E7F0F737F78 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
