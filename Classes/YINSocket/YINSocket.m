@@ -5,8 +5,6 @@
 //  Created by apple on 2018/3/5.
 //  Copyright © 2018年 王印. All rights reserved.
 //
-#import "GCDAsyncSocket.h"
-#import "GCDAsyncUdpSocket.h"
 
 #import "YINSocket.h"
 
