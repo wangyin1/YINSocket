@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
-
 typedef enum : NSUInteger {
     YINSocketEventConnectSucceed,//连接成功 / 有新的客户机连接
     YINSocketEventConnectError,//断开连接 / 有客户机断开连接
