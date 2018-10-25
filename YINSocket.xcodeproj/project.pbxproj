@@ -37,6 +37,7 @@
 		1883E79A218174BA006EAF63 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		1883E79B218174BA006EAF63 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		1883E79C218174BA006EAF63 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1883E7B221817A64006EAF63 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		265B84668DEB8152741D2442 /* libPods-YINSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YINSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A1FE0186B08EC649B2E65 /* Pods-YINSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YINSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-YINSocket/Pods-YINSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +106,7 @@
 		777F5059EC8893F0F3DDA73A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1883E7B221817A64006EAF63 /* CFNetwork.framework */,
 				265B84668DEB8152741D2442 /* libPods-YINSocket.a */,
 			);
 			name = Frameworks;
